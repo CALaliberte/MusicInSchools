@@ -4,7 +4,7 @@ header {
 }
 
 .lead {
-    padding-bottom: 2%;
+    padding-bottom: 2rem;
 }
 
 .navbar-nav {
@@ -28,7 +28,7 @@ header {
 }
 
 .container-fluid {
-    height: 50px;
+    height: 3.125rem;
     background-color: #24504B;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .content {
     font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+    font-size: 1.5rem;
     font-weight: bold;
     position: absolute;
     width: 100%;
@@ -47,28 +47,29 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #334636;
-    text-shadow: 1px 1px 2px #C6D7C8;
+    text-shadow: 0.0625rem 0.0625rem 0.125rem #C6D7C8;
     text-align: center;
     z-index: 1;
-    padding: 2%;
+    padding: 2rem;
 }
 
 .image {
     width: 100%;
-    filter: blur(10px);
+    filter: blur(0.625rem);
+    height: 425rem;
 }
 
 .home, .about, .resources {
     position: relative;
-    margin: 3%;
+    margin: 3rem;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px #000000;
+    border-radius: 1.25rem;
+    box-shadow: 0rem 0rem 1.25rem #000000;
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
     overflow: hidden;
@@ -78,51 +79,111 @@ body {
     transform: translateY(0);
     transform: scale(1);
     &:hover {
-        box-shadow: 0px 0px 40px #000000;
-        transform: translateY(-10px);
+        box-shadow: 0rem 0rem 2.5rem #000000;
+        transform: translateY(-0.625rem);
         transform: scale(1.05);
     }
     &:active {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
         transform: scale(1.025);
     }
     &:focus {
         outline: none;
     }
     &:focus-visible {
-        outline: 2px solid #000000;
+        outline: 0.125rem solid #000000;
     }
     &:focus-within {
-        outline: 2px solid #000000;
+        outline: 0.125rem solid #000000;
     }   
 }
 
 .home {
-    height: 45rem;
+    height: 35rem;
 }
 
 .about {
-    height: 60rem;
+    height: 100rem;
 }
 
 .about > div > h1 {
-    margin: 5%;
+    margin: 5rem;
     text-decoration: underline;
 }
 
 .resources {
-    height: 260rem;
+    height: 425rem;
 }
 
 .resources > div > h1 {
-    margin: 5%;
+    margin: 5rem;
     text-decoration: underline;
 }
 
 .resources > .image {
-    height: 260rem;
+    height: 425rem;
 }
 
 .resources > div > div > h3 {
-    margin: 5%;
+    margin: 5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  /* Styles for screens up to 991px wide (e.g., tablets) */
+  header {
+    height: 6rem;
+  }
+
+  .navbar-nav {
+    justify-content: space-around;
+  }
+
+  .home {
+    height: 30rem;
+  }
+
+  .about {
+    height: 90rem;
+  }
+
+  .resources {
+    height: 375rem;
+  }
+
+  .resources > .image {
+    height: 375rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for screens up to 767px wide (e.g., smartphones) */
+  header {
+    height: 5rem;
+  }
+
+  .navbar-nav {
+    justify-content: space-between;
+  }
+
+  .home {
+    height: 25rem;
+  }
+
+  .about {
+    height: 80rem;
+  }
+
+  .resources {
+    height: 325rem;
+  }
+
+  .resources > .image {
+    height: 325rem;
+  }
+
+  .content {
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
 }
