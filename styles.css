@@ -98,11 +98,11 @@ body {
 }
 
 .home {
-    height: 65vh;
+    height: 45rem;
 }
 
 .about {
-    height: 125vh;
+    height: 60rem;
 }
 
 .about > div > h1 {
@@ -111,15 +111,16 @@ body {
 }
 
 .resources {
-    height: 675vh;
+    height: 260rem;
 }
 
 .resources > div > h1 {
+    margin: 5%;
     text-decoration: underline;
 }
 
 .resources > .image {
-    height: 675vh;
+    height: 260rem;
 }
 
 .resources > div > div > h3 {
