@@ -1,10 +1,10 @@
 header {
-    height: 8rem;
+    height: 500%;
     color: #C6D7C8;
 }
 
 .lead {
-    padding-bottom: 2rem;
+    padding-bottom: 2%;
 }
 
 .navbar-nav {
@@ -28,7 +28,7 @@ header {
 }
 
 .container-fluid {
-    height: 3.125rem;
+    height: 3%;
     background-color: #24504B;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .content {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
+    font-size: 1em;
     font-weight: bold;
     position: absolute;
     width: 100%;
@@ -47,29 +47,29 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #334636;
-    text-shadow: 0.0625rem 0.0625rem 0.125rem #C6D7C8;
+    text-shadow: 0.0625% 0.0625% 0.125% #C6D7C8;
     text-align: center;
     z-index: 1;
-    padding: 2rem;
+    padding: 2%;
 }
 
 .image {
     width: 100%;
-    filter: blur(0.625rem);
-    height: 425rem;
+    filter: blur(5px);
+    height: 100%;
 }
 
 .home, .about, .resources {
     position: relative;
-    margin: 3rem;
+    margin: 1%;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 1.25rem;
-    box-shadow: 0rem 0rem 1.25rem #000000;
+    border-radius: 1.25%;
+    box-shadow: 0% 0% 1.25% #000000;
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
     overflow: hidden;
@@ -79,111 +79,50 @@ body {
     transform: translateY(0);
     transform: scale(1);
     &:hover {
-        box-shadow: 0rem 0rem 2.5rem #000000;
-        transform: translateY(-0.625rem);
+        box-shadow: 0% 0% 2.5% #000000;
+        transform: translateY(-0.625%);
         transform: scale(1.05);
     }
     &:active {
-        transform: translateY(-0.3125rem);
+        transform: translateY(-0.3125%);
         transform: scale(1.025);
     }
     &:focus {
         outline: none;
     }
     &:focus-visible {
-        outline: 0.125rem solid #000000;
+        outline: 0.125% solid #000000;
     }
     &:focus-within {
-        outline: 0.125rem solid #000000;
+        outline: 0.125% solid #000000;
     }   
 }
 
 .home {
-    height: 35rem;
+    height: 25em;
 }
 
 .about {
-    height: 100rem;
+    height: 50em;
 }
 
 .about > div > h1 {
-    margin: 5rem;
     text-decoration: underline;
 }
 
 .resources {
-    height: 425rem;
+    height: 220em;
 }
 
 .resources > div > h1 {
-    margin: 5rem;
     text-decoration: underline;
 }
 
-.resources > .image {
-    height: 425rem;
-}
-
 .resources > div > div > h3 {
-    margin: 5rem;
+    margin: 2%;
 }
 
-/* Responsive styles */
-@media (max-width: 991px) {
-  /* Styles for screens up to 991px wide (e.g., tablets) */
-  header {
-    height: 6rem;
-  }
-
-  .navbar-nav {
-    justify-content: space-around;
-  }
-
-  .home {
-    height: 30rem;
-  }
-
-  .about {
-    height: 90rem;
-  }
-
-  .resources {
-    height: 375rem;
-  }
-
-  .resources > .image {
-    height: 375rem;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Styles for screens up to 767px wide (e.g., smartphones) */
-  header {
-    height: 5rem;
-  }
-
-  .navbar-nav {
-    justify-content: space-between;
-  }
-
-  .home {
-    height: 25rem;
-  }
-
-  .about {
-    height: 80rem;
-  }
-
-  .resources {
-    height: 325rem;
-  }
-
-  .resources > .image {
-    height: 325rem;
-  }
-
-  .content {
-    font-size: 1.25rem;
-    padding: 1rem;
-  }
+footer {
+    text-align: center;
+    color: #C6D7C8;
 }
