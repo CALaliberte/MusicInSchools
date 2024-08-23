@@ -1,55 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    height: 8rem;
+    color: #C6D7C8;
 }
 
-header h1 {
-    margin: 0;
-    padding: 0;
+.lead {
+    padding-bottom: 2%;
 }
 
-header p {
-    margin: 10px 0 0;
-    padding: 0;
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
 }
 
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    margin: 0 0 10px;
-    padding: 0;
-}
-
-ul {
-    list-style-type: none;
+.navbar {
     padding: 0;
     margin: 0;
 }
 
-ul li {
-    margin-bottom: 5px;
-}
-
-a {
-    color: #007bff;
+.nav-link {
     text-decoration: none;
 }
 
-a:hover {
+.nav-link.active {
+    text-decoration: underline black;
+}
+
+.container-fluid {
+    height: 50px;
+    background-color: #24504B;
+}
+
+body {
+    padding: 0; 
+    background-color: #152328;
+}
+
+.content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #334636;
+    text-shadow: 1px 1px 2px #C6D7C8;
+    text-align: center;
+    z-index: 1;
+    padding: 2%;
+}
+
+.image {
+    width: 100%;
+    filter: blur(10px);
+}
+
+.home, .about, .resources {
+    position: relative;
+    margin: 3%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #000000;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.5s ease-in-out;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+    transform: scale(1);
+    &:hover {
+        box-shadow: 0px 0px 40px #000000;
+        transform: translateY(-10px);
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: translateY(-5px);
+        transform: scale(1.025);
+    }
+    &:focus {
+        outline: none;
+    }
+    &:focus-visible {
+        outline: 2px solid #000000;
+    }
+    &:focus-within {
+        outline: 2px solid #000000;
+    }   
+}
+
+.home {
+    height: 65vh;
+}
+
+.about {
+    height: 125vh;
+}
+
+.about > div > h1 {
+    margin: 5%;
     text-decoration: underline;
+}
+
+.resources {
+    height: 675vh;
+}
+
+.resources > div > h1 {
+    text-decoration: underline;
+}
+
+.resources > .image {
+    height: 675vh;
+}
+
+.resources > div > div > h3 {
+    margin: 5%;
 }

@@ -1,11 +1,26 @@
-var colors = ['#ffcccc', '#ffebcc', '#ffffcc', '#eaffcc', '#ccffcc', '#ccffeb', '#ccffff', '#cce6ff', '#ccccff', '#e6ccff'];
-var currentIndex = 0;
-var transitionDuration = 2000;
+function updateNavbarActiveState() {
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav .nav-underline');
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
-function changeBackgroundColor() {
-    document.body.style.backgroundColor = colors[currentIndex];
-    currentIndex = (currentIndex + 1) % colors.length;
-    document.body.style.transition = `background-color ${transitionDuration}ms ease`;
+    let currentSectionId = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - navbarHeight;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentSectionId = section.id;
+            console.log('currentSectionId:', currentSectionId)
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+            console.log('Active Link:', link)
+        }
+    });
 }
 
-setInterval(changeBackgroundColor, transitionDuration); // Change the background color every 2 seconds
+window.addEventListener('scroll', updateNavbarActiveState);
+
+document.addEventListener('DOMContentLoaded', updateNavbarActiveState);
