@@ -98,11 +98,11 @@ body {
 }
 
 .home {
-    height: 65vh;
+    height: 65%;
 }
 
 .about {
-    height: 125vh;
+    height: 125%;
 }
 
 .about > div > h1 {
@@ -111,7 +111,7 @@ body {
 }
 
 .resources {
-    height: 675vh;
+    height: 675%;
 }
 
 .resources > div > h1 {
@@ -119,7 +119,7 @@ body {
 }
 
 .resources > .image {
-    height: 675vh;
+    height: 675%;
 }
 
 .resources > div > div > h3 {
